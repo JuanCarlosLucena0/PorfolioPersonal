@@ -1,9 +1,11 @@
 body {
   font-family: sans-serif;
-  background-color: #0B1D2F;
+  /*background-color: #1E3A8A;*/
+  background: linear-gradient(135deg, #1E3A8A, #079dbb);
+
   justify-content: center;
   align-items: stretch;
-  color: #E0E0E0;
+  color: #BEE3F8;
   padding: 2rem;
   max-width: 800px;
   margin: auto;
@@ -12,7 +14,7 @@ body {
 p {
   margin-bottom: 2rem; 
   line-height: 1.6;  
-  color: #A0D8EF 
+  color: #FFFFFF   
 }
 
 
@@ -20,6 +22,9 @@ p {
 h1 {
   margin-bottom: 2rem; 
   text-align: center;
+  color: rgb(255, 174, 0);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
 }
 
 h4 {
@@ -27,7 +32,19 @@ h4 {
   font-size: 1.5rem;  
   margin: 2rem 0 1rem;   
   margin-top: 4rem;   
-  color: #00CFFF;      
+  color: #FFBF00;   
+    position: relative;         /* necesario para el ::after */
+   
+}
+
+h4::after {
+  content: "";
+  display: block;
+  width: 50px;               /* ancho de la línea */
+  height: 2px;               /* grosor de la línea */
+  background-color: #FFBF00; /* mismo amarillo que el título */
+  margin: 0.5rem auto 0;     /* espacio arriba y centrado horizontalmente */
+  border-radius: 2px;        /* bordes redondeados para suavizar */
 }
 
 a {

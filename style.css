@@ -11,8 +11,11 @@ body {
 
 p {
   margin-bottom: 2rem; 
-  line-height: 1.6;   
+  line-height: 1.6;  
+  color: #A0D8EF 
 }
+
+
 
 h1 {
   margin-bottom: 2rem; 
@@ -23,7 +26,8 @@ h4 {
   text-align: center;
   font-size: 1.5rem;  
   margin: 2rem 0 1rem;   
-  margin-top: 4rem;         
+  margin-top: 4rem;   
+  color: #00CFFF;      
 }
 
 a {
@@ -38,6 +42,14 @@ a {
 a:hover {
   background-color: #005fa3;
 }
+
+cabeceraP{
+display: block; /* importante para que se comporte como un <p> */
+  margin: 1em 0;
+  color: #F5F5F5;
+
+}
+
 .galeria {
   display: flex;
   flex-wrap: wrap;

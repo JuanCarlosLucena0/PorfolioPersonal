@@ -88,10 +88,11 @@ display: block; /* importante para que se comporte como un <p> */
   align-items: center;
   margin: 3%;
   text-align: center;
-    background-color: rgba(255, 255, 255, 0.05); /* fondo transparente oscuro */
+  background-color: rgba(255, 255, 255, 0.05); /* fondo transparente oscuro */
   border-radius: 12px;          /* bordes suaves */
   box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* sombra para profundidad */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer; /* da sensación de clickeable */
 
 }
 
@@ -102,10 +103,15 @@ display: block; /* importante para que se comporte como un <p> */
   object-fit: contain;
   display: block;
   border-radius: 8px;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
-.item img:hover {
+/* zoom suave solo al logo */
+.item:hover img {
+  transform: scale(1.08);  /* un poquito más grande */
+}
+
+.item:hover {
   transform: translateY(-5px) scale(1.05); /* elevación + zoom al pasar mouse */
   box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 

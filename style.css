@@ -229,3 +229,18 @@ display: block; /* importante para que se comporte como un <p> */
     color: #FFFFFF; /* texto blanco sobre tarjeta */
 
 }
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  cursor: pointer; /* hace que el ratón cambie al pasar por encima */
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contacto-item:hover {
+  color: #FFBF00; /* un cambio de color al pasar el ratón */
+}

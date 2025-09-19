@@ -47,19 +47,28 @@ header nav {
 }
 
 header nav::-webkit-scrollbar {
-  height: 6px;
+  height: 4px;
+  background: transparent;            /* track transparente */
 }
-header nav::-webkit-scrollbar-thumb { 
-  background: rgba(255,255,255,0.3);
-  border-radius: 3px;
+
+header nav::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.3);
+  border-radius: 4px;
+  transition: background 0.3s;
 }
+
+header nav:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 1);   /* se hace más visible al pasar el mouse */
+}
+
 
 .menu {
   display: flex;
   gap: 0.5rem;            /* separación entre botones */
   list-style: none;
   margin: 0;
-  padding: 0;
+    padding: 0 2rem 0 0; /* agrega padding a la derecha para el último botón */
+
   flex-wrap: nowrap;       /* evita que los botones se rompan a otra línea */
   justify-content: flex-start; /* empieza desde la izquierda */
 
@@ -78,16 +87,15 @@ header nav::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;       /* altura un poco más compacta */
-  min-width: 100px;   /* ancho mínimo */
-  padding: 0 0.5rem;  /* margen interno */
+  height: 40px;
+  min-width: 100px;
+  padding: 0 0.5rem;
   text-decoration: none;
   color: #FFD700;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
-  transition: background-color 0.3s, color 0.3s;
-  white-space: nowrap; /* evita que el texto se rompa en varias líneas */
+  white-space: nowrap;
 
 }
 

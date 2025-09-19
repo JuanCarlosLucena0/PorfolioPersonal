@@ -1,3 +1,8 @@
+html{
+  scroll-behavior: smooth; /* scroll animado */
+  scroll-padding-top: 200px; /* altura de la barra de navegación */
+
+}
 
 body {
   font-family: sans-serif;
@@ -7,9 +12,98 @@ body {
   justify-content: center;
   align-items: stretch;
   color: #BEE3F8;
-  padding: 2rem;
-  max-width: 800px;
+  /*padding: 2rem;*/
+  margin: 0;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.6); /* más transparente */
+  backdrop-filter: blur(6px);     /* efecto vidrio */
+  -webkit-backdrop-filter: blur(6px); /* soporte en Safari */
+  padding: 1rem 0;
+  position: sticky; /* siempre visible arriba */
+  top: 0;
+  left: 0;
+  width: 100%; /* ocupa todo el ancho */
+  z-index: 1000; /* por encima del contenido */
+
+  border-bottom: 2px solid rgba(255, 215, 0, 0.4); /* borde dorado */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);        /* sombra para separarlo */
+
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+
+}
+
+header.scrolled {
+  border-bottom: 1px solid rgba(255, 215, 0, 0.9); /* más brillante */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);       /* más intensa */
+}
+
+header nav {
+  overflow-x: auto;        /* permite scroll horizontal */
+  padding: 0 2rem;         /* margen lateral */
+
+}
+
+header nav::-webkit-scrollbar {
+  height: 6px;
+}
+header nav::-webkit-scrollbar-thumb { 
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+.menu {
+  display: flex;
+  gap: 0.5rem;            /* separación entre botones */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;       /* evita que los botones se rompan a otra línea */
+  justify-content: flex-start; /* empieza desde la izquierda */
+
+
+}
+
+.menu li {
+  flex: none; /* cada li se expande igual */
+}
+
+.menu li:last-child {
+  margin-right: 0.5rem;
+}
+
+.menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;       /* altura un poco más compacta */
+  min-width: 100px;   /* ancho mínimo */
+  padding: 0 0.5rem;  /* margen interno */
+  text-decoration: none;
+  color: #FFD700;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap; /* evita que el texto se rompa en varias líneas */
+
+}
+
+.menu li a:hover {
+    color: #FF8C00;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav {
+  padding: 0 2rem; /* más margen a los lados */
+}
+
+main {
+  max-width: 800px;  /* el contenido sí limitado */
   margin: auto;
+  padding: 2rem;
 }
 
 p {

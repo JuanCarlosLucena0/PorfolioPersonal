@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
+  
+
 
 <head>
   <meta charset="UTF-8">
@@ -8,15 +10,35 @@
 </head>
 
 <body>
+
+  <header>
+  <nav>
+    <ul class="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#lenguajes">Lenguajes</a></li>
+      <li><a href="#marcado">Lenguajes de Marcado</a></li>
+      <li><a href="#xml">Tecnología XML</a></li>
+      <li><a href="#intercambioDatos">Intercambio de datos</a></li>
+      <li><a href="#basesdedatos">Bases de Datos</a></li>
+      <li><a href="#herramientas">Herramientas de trabajo</a></li>
+      <li><a href="#frameworks">Frameworks</a></li>
+      <li><a href="#entornos">Entornos de desarrollo</a></li>
+      <li><a href="#motoresDesarrollo">Motores de desarrollo</a></li>
+      <li><a href="#paradigmas">Paradigmas y arquitecturas</a></li>
+      <li><a href="#automatizacion">Automatización y Scripting</a></li>
+    </ul>
+  </nav>
+</header>
+
   <main>
-    <h1>Hola, soy Juan Carlos</h1>
+    <h1 id="inicio">Hola, soy Juan Carlos</h1>
     <br>
     <cabeceraP>
       Me formo constantemente para aprender y desarrollar actuales y nuevas habilidades. Estas son las herramientas que
       he aprendido hasta ahora:
     </cabeceraP>
 
-    <h4>Lenguajes de programación:</h4>
+    <h4 id="lenguajes">Lenguajes de programación:</h4>
 
     <section class="galeria">
 
@@ -46,7 +68,7 @@
 
     </section>
 
-    <h4>Lenguajes de marca:</h4>
+    <h4 id="marcado">Lenguajes de marca:</h4>
 
     <section class="galeria">
 
@@ -67,7 +89,7 @@
 
     </section>
 
-    <h4>Tecnologias basadas en XML:</h4>
+    <h4 id="xml">Tecnologias basadas en XML:</h4>
 
     <section class="galeria">
 
@@ -89,7 +111,7 @@
 
     </section>
 
-    <h4>Formatos de intercambio de datos</h4>
+    <h4 id="intercambioDatos">Formatos de intercambio de datos</h4>
 
     <section class="galeria">
       <a href="https://www.json.org/json-en.html" target="_blank" rel="noopener noreferrer" class="item">
@@ -106,7 +128,7 @@
     </section>
 
 
-    <h4>Bases de datos:</h4>
+    <h4 id="basesdedatos">Bases de datos:</h4>
     <section class="galeria">
       <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" class="item">
         <img src="assets/mysql-logo.png" alt="MySQL">
@@ -144,7 +166,7 @@
       </a>
     </section>
 
-    <h4>Herramientas de trabajo:</h4>
+    <h4 id="herramientas">Herramientas de trabajo:</h4>
     <section class="galeria">
 
 
@@ -187,7 +209,7 @@
     </section>
 
 
-    <h4>Frameworks:</h4>
+    <h4 id="frameworks">Frameworks:</h4>
     <section class="galeria">
 
       <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" class="item">
@@ -211,7 +233,7 @@
       </a>
     </section>
 
-    <h4>Entornos de Desarrollo Integrado:</h4>
+    <h4 id="entornos">Entornos de Desarrollo Integrado:</h4>
     <section class="galeria">
 
       <a href="https://netbeans.apache.org/" target="_blank" rel="noopener noreferrer" class="item">
@@ -242,7 +264,7 @@
 
     </section>
 
-    <h4>Motores de desarrollo:</h4>
+    <h4 id="motoresDesarrollo">Motores de desarrollo:</h4>
     <section class="galeria">
 
       <a href="https://unity.com/" target="_blank" rel="noopener noreferrer" class="item">
@@ -254,7 +276,7 @@
 
     </section>
 
-    <h4>Paradigmas y Arquitecturas</h4>
+    <h4 id="paradigmas">Paradigmas y Arquitecturas</h4>
     <section class="galeria">
 
       <a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n_concurrente" target="_blank" rel="noopener noreferrer"
@@ -295,7 +317,7 @@
 
     </section>
 
-    <h4>Automatización y Scripting:</h4>
+    <h4 id="automatizacion">Automatización y Scripting:</h4>
     <section class="galeria">
 
       <a href="https://es.wikipedia.org/wiki/Shell_script" target="_blank" rel="noopener noreferrer" class="item">
@@ -315,6 +337,18 @@
       <p>GitHub: <a href="https://github.com/JuanCarlosLucena0" target="_blank">Mi perfil</a></p>
     </section>
   </main>
+
+  <script>
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    if (window.scrollY > 10) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
 </body>
 
 </html>
